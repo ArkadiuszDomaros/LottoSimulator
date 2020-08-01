@@ -1,10 +1,8 @@
 package lottoSimulator;
 
-import java.util.Objects;
-
 public class Matcher {
-    ClientNumbersList clientNumbersList = new ClientNumbersList();
-    SimulatorNumbersList simulatorNumbersList = new SimulatorNumbersList();
+    private final ClientNumbersList clientNumbersList = new ClientNumbersList();
+    private final SimulatorNumbersList simulatorNumbersList = new SimulatorNumbersList();
     int countOfCorrectNumbers = 0;
 
 

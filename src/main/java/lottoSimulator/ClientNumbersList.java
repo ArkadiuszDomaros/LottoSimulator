@@ -1,32 +1,42 @@
 package lottoSimulator;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class ClientNumbersList {
-    private List<Integer> list = new ArrayList<>();
+    private final List<Integer> list = new ArrayList<>();
 
     public List<Integer> getList() {
         return list;
     }
 
-    public void setList(List<Integer> list) {
-        this.list = list;
-    }
-
     public void showList(){
+        System.out.println(" ");
+        System.out.println("Your numbers:");
         System.out.println(list);
     }
 
     public void appendList(){
-        list.add(12);
-        list.add(41);
-        list.add(5);
-        list.add(24);
-        list.add(38);
-        list.add(14);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose your numbers between 1 and 49!");
+        int i = 0;
+        int prevNumber = 0;
+        while(i < 6){
+            System.out.println("Your no." + (i + 1) + " pick is?");
+            int number = scanner.nextInt();
+            if(number >= 1 && number <= 49){
+                if(number != prevNumber){
+                    list.add(number);
+                    i++;
+                    prevNumber = number;
+                } else {
+                    System.out.println("You can't pick two the same numbers!");
+                }
+
+            } else {
+                System.out.println("Your pick is out of range! Try another number between 1 and 49!");
+            }
+        }
+        scanner.close();
         Collections.sort(list);
     }
 
