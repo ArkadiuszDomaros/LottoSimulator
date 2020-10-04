@@ -4,7 +4,7 @@ App created to train Java skills.
 
 App is a simulator of the Lotto lottery.
 
-This is console aplication based on pick our six numbers and compare to random draw numbers.
+This is console aplication based on pick your six numbers and compare to random draw numbers.
 
 To do:
   -tests
